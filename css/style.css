@@ -1,3 +1,27 @@
 .screen {
-    
+    background: teal;
+    position: absolute;
+    top: 200px;
+    max-width: 600px;
+    height: 300px;
+    margin: auto auto;
+    left:0;
+    right:0;
+}
+
+.gold {
+    width: 70px;
+    height: 70px;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 370px;
+    border-radius: 100%;
+    box-shadow: 0 0 45px yellow,
+                0 0 45px yellow,
+                0 0 45px yellow,
+                0 0 45px yellow,
+                0 0 45px yellow,
+                0 0 45px yellow;
+    margin-top: -35px;
 }
