@@ -33,7 +33,7 @@ $(document).ready(function () {
         // and animate it
         $helium.johnnysPath({d: 1000}, [
             {x: 405},
-            {x: 600, y: y},
+            {x: 600, y: y, d: 550},
         ], function () {
             $(this).remove();
         });
