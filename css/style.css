@@ -22,8 +22,23 @@
                 0 0 45px yellow,
                 0 0 45px yellow,
                 0 0 45px yellow,
+                0 0 45px yellow,
+                0 0 45px yellow,
+                0 0 45px yellow,
                 0 0 45px yellow;
     margin-top: -35px;
+}
+
+.gold .n {
+    background: rgb(219, 115, 1);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    top: 50%;
+    margin-top: -10px;
+    border-radius: 100%;
 }
 
 .source {
