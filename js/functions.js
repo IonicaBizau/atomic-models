@@ -28,7 +28,7 @@ $(document).ready(function () {
 
             // compute the new y
             y = 150 * percent/100;
-        } else if (y > 160 && y >= 87) {
+        } else if (y > 160 && y <= 210) {
 
             // get delta
             var delta = 65 - y + 160
