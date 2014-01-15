@@ -1,3 +1,9 @@
+h1 {
+    font-family: Helvetica;
+    text-align: center;
+    color: rgb(56, 0, 0);
+}
+
 .screen {
     background: maroon;
     position: absolute;
