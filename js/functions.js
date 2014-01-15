@@ -16,7 +16,9 @@ $(document).ready(function () {
         $(".screen").append($helium);
 
         // and animate it
-        $(".helium").johnnysPath({d: 1000}, [{x: 600}]);
+        $(".helium").johnnysPath({d: 1000}, [{x: 600}], function () {
+            $(this).remove();
+        });
 
     }, 700);
 });
