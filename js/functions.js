@@ -21,7 +21,7 @@ $(document).ready(function () {
         if (y > 87 && y < 128) {
 
             // get delta
-            var delta = 126 - y
+            var delta = 110 - y
 
                 // get percent value
               , percent = delta * 100 / 41;
