@@ -1,4 +1,3 @@
-var animate = true;
 $(document).ready(function () {
 
     $(".source").draggable({
@@ -25,7 +24,6 @@ $(document).ready(function () {
             y = 10;
         }
 
-        if (!animate) { return; }
         // and animate it
         $helium.johnnysPath({d: 1000}, [
             {x: 405},
