@@ -4,7 +4,7 @@ $(document).ready(function () {
         axis: "y",
         containment: "parent",
         drag: function () {
-            console.log($(".source").position().top);
+            console.log($(".source").position().top + 6);
         }
     });
 
@@ -17,12 +17,18 @@ $(document).ready(function () {
         var $helium = $("<div class=\"helium\"></div>")
                             .css("top", y);
 
+        if (y > 87 && y < 128) {
+            y = 10;
+        } else if (y > 164) {
+            y = $(".screen").height();
+        } else if (y <= 87) {
+            /* do nothing */
+        } else {
+            return;
+        }
+
         // append the helium to screen
         $(".screen").append($helium);
-
-        if (y > 90) {
-            y = 10;
-        }
 
         // and animate it
         $helium.johnnysPath({d: 1000}, [
