@@ -1,6 +1,26 @@
+(function ($) {
+    $.setLanguage = function (options) {
+
+        // merge options
+        var settings = $.extend({
+            attribute: "data-lang",
+            lang: "en"
+        }, options);
+
+        // hide all elements with this attirbute
+        $("[" + settings.attribute + "]").hide();
+
+        // show the elements with this language
+        $("[" + settings.attribute + "='" + settings.lang + "']").show();
+    }
+})($)
+
 $(document).ready(function () {
 
     var $activeScreen = $(".screen:visible");
+
+    // first of all, set language
+    $.setLanguage({lang: "ro"});
 
     // TODO jQuery plugin
     $("[data-show]").on("click", function () {
