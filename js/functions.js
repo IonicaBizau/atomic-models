@@ -17,14 +17,29 @@ $(document).ready(function () {
         var $helium = $("<div class=\"helium\"></div>")
                             .css("top", y);
 
+        // top
         if (y > 87 && y < 128) {
-            y = 10;
-        } else if (y > 164) {
-            y = $(".screen").height();
-        } else if (y <= 87) {
-            /* do nothing */
-        } else {
-            return;
+
+            // get delta
+            var delta = 126 - y
+
+                // get percent value
+              , percent = delta * 100 / 41;
+
+            // compute the new y
+            y = 150 * percent/100;
+        } else if (y > 160 && y >= 87) {
+
+            // get delta
+            var delta = 65 - y + 160
+
+                // get percent value
+              , percent = delta * 100 / 41;
+
+            // compute the new y
+            y = 150 + 150 * percent/100;
+        } else if (y > 220) {
+            y = y;
         }
 
         // append the helium to screen
