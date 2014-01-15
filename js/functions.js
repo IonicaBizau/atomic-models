@@ -1,5 +1,19 @@
 $(document).ready(function () {
 
+    var $activeScreen = $(".screen:visible");
+
+    // TODO jQuery plugin
+    $("[data-show]").on("click", function () {
+        var showQuery = $(this).attr("data-show")
+          , hideQuery = $(this).attr("data-hide");
+
+        $(showQuery).show();
+        $(hideQuery).hide();
+
+        $activeScreen = $(".screen:visible");
+    });
+
+    // both sources draggable
     $(".source").draggable({
         axis: "y",
         containment: "parent",
@@ -11,45 +25,74 @@ $(document).ready(function () {
     // set an interval for creating helium elements
     setInterval(function () {
 
-        var y = $(".source").position().top + 6
+        var y = $(".source", $activeScreen).position().top + 6
           , x = 600;
 
         // create helium element
         var $helium = $("<div class=\"helium\"></div>")
                             .css("top", y);
 
-        // don't compute anything in this case
-        if (y > 132 && y < 159) {
-            x = -10;
-            y += 20;
-        } else if (y > 87 && y < 160) {
-            
-            // get delta
-            var delta = 110 - y
+        if ($activeScreen.hasClass("rutherford")) {
+            // don't compute anything in this case
+            if (y > 132 && y < 159) {
+                x = -10;
+                y += 20;
+            } else if (y > 87 && y < 160) {
 
-                // get percent value
-              , percent = delta * 100 / 41;
+                // get delta
+                var delta = 110 - y
 
-            // compute the new y
-            y = 150 * percent/100;
+                    // get percent value
+                  , percent = delta * 100 / 41;
 
-        } else if (y >= 160 && y < 210) {
+                // compute the new y
+                y = 150 * percent/100;
 
-            // get delta
-            var delta = 65 - y + 160
+            } else if (y >= 160 && y < 210) {
 
-                // get percent value
-              , percent = delta * 100 / 41;
+                // get delta
+                var delta = 65 - y + 160
 
-            // compute the new y
-            y = 150 + 150 * percent/100;
+                    // get percent value
+                  , percent = delta * 100 / 41;
 
-        } else if (y >= 210) {
-            y = y;
+                // compute the new y
+                y = 150 + 150 * percent/100;
+
+            } else if (y >= 210) {
+                y = y;
+            }
+        } else {
+
+            if (y > 87 && y < 170) {
+
+                // get delta
+                var delta = y - 87
+
+                    // get percent value
+                  , percent = delta * 100 / 60;
+
+                // compute the new y
+                y = 150 * percent/100;
+
+            } else if (y >= 170 && y < 210) {
+
+                // get delta
+                var delta = y - 160
+
+                    // get percent value
+                  , percent = delta * 100 / 60;
+
+                // compute the new y
+                y = 150 + 150 * percent/100;
+
+            } else if (y >= 210) {
+                y = y;
+            }
         }
 
         // append the helium to screen
-        $(".screen").append($helium);
+        $activeScreen.append($helium);
 
         // and animate it
         $helium.johnnysPath({d: 1000}, [
@@ -59,5 +102,5 @@ $(document).ready(function () {
             $(this).remove();
         });
 
-    }, 300);
+    }, 200);
 });
