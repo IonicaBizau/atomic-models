@@ -14,15 +14,27 @@
         <h1 data-lang="ro">Modele atomice</h1>
         <h1 data-lang="en">Atomic models</h1>
         <div align="center">
-            <button data-lang="ro" data-hide=".screen.rutherford" data-show=".screen.thompson">Modelul Thompson</button>
-            <button data-lang="ro" data-hide=".screen.thompson"   data-show=".screen.rutherford">Modelul Rutherford</button>
+            <button class="teal active" data-lang="ro" data-hide=".screen.rutherford" data-show=".screen.thompson">Modelul Thompson</button>
+            <button class="teal" data-lang="ro" data-hide=".screen.thompson"   data-show=".screen.rutherford">Modelul Rutherford</button>
 
-            <button data-lang="en" data-hide=".screen.rutherford" data-show=".screen.thompson">Thompson's Model</button>
-            <button data-lang="en" data-hide=".screen.thompson"   data-show=".screen.rutherford">Rutherford's Model</button>
+            <button class="teal active" data-lang="en" data-hide=".screen.rutherford" data-show=".screen.thompson">Thompson's Model</button>
+            <button class="teal" data-lang="en" data-hide=".screen.thompson"   data-show=".screen.rutherford">Rutherford's Model</button>
+
+            <br>
+            <button data-l="ro" class="red active">RO</button>
+            <button data-l="en" class="red">EN</button>
+
+            <p>Copyright &copy; 2014 Ionică Bizău - <span data-lang="ro">Sub licență MIT</span><span data-lang="en">Under MIT License</span>
+                <span data-lang="ro">Codul sursă este disponibil <a href="http://github.com/IonicaBizau/atomic-models" target="_blank">aici</a>.</span>
+                <span data-lang="en">The project is open source and hosted <a href="http://github.com/IonicaBizau/atomic-models" target="_blank">here</a>.</span>
+            </p>
         </div>
+
         <div class="screen thompson">
             <h1 data-lang="ro">Modelul Thompson</h1>
             <h1 data-lang="en">Thompson's Model</h1>
+
+            <p data-lang="ro">Sarcina electrică pozitivă a atomului este uniform distribuită în tot atomul.</p>
 
             <div class="source"></div>
             <div class="gold">
@@ -31,6 +43,7 @@
         <div class="screen rutherford hide">
             <h1 data-lang="ro">Modelul Rutherford</h1>
             <h1 data-lang="en">Rutherford's Model</h1>
+            <p data-lang="ro">Sarcina electrică pozitivă a atomului este concentrată într-un nucleu.</p>
             <div class="source"></div>
             <div class="gold">
                 <div class="n"></div>

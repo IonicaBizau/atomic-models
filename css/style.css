@@ -2,6 +2,15 @@
     display: none;
 }
 
+body {
+    font-family: Helvetica;
+}
+
+p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
 h1 {
     font-family: Helvetica;
     text-align: center;
@@ -13,6 +22,7 @@ h1 {
     font-size: 20px;
     text-align: left;
     margin-left: 10px;
+    margin-bottom: 3px;
     text-shadow: 1px 1px 1px black;
 }
 
@@ -23,8 +33,10 @@ h1 {
     max-width: 600px;
     height: 300px;
     margin: auto auto;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
+    border-radius: 4px;
+    border: 3px solid rgb(104, 0, 0);
 }
 
 .gold {
@@ -78,3 +90,25 @@ h1 {
     left: 60px;
     border-radius: 100%;
 }
+
+button {
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    padding: 12px;
+    color: white;
+    font-family: Helvetica;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button.teal:hover,
+button.teal.active { background: rgb(2, 177, 177); }
+
+button.teal { background: teal; }
+
+button.red:hover,
+button.red.active { background: rgb(182, 0, 0); }
+button.red { background: darkred; }
+
+.screen p {color: white; margin: 0 0 0 10px}

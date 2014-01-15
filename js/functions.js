@@ -19,6 +19,13 @@ $(document).ready(function () {
 
     var $activeScreen = $(".screen:visible");
 
+    $("[data-l]").on("click", function () {
+        $.setLanguage({lang: $(this).attr("data-l")});
+
+        $("[data-l].active").removeClass("active");
+        $(this).addClass("active");
+    });
+
     // first of all, set language
     $.setLanguage({lang: "ro"});
 
@@ -29,6 +36,9 @@ $(document).ready(function () {
 
         $(showQuery).show();
         $(hideQuery).hide();
+
+        $("[data-show].active").removeClass("active");
+        $("[data-show='" + $(this).attr("data-show") + "']").addClass("active");
 
         $activeScreen = $(".screen:visible");
     });
