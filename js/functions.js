@@ -17,6 +17,19 @@
 
 $(document).ready(function () {
 
+    $(window).on("keydown", function (e) {
+        if (e.which === 40) {
+            $(".source", $activeScreen).css({
+                top: "+=5px"
+            });
+        }
+        if (e.which === 38) {
+            $(".source", $activeScreen).css({
+                top: "-=5px"
+            });
+        }
+    });
+
     var $activeScreen = $(".screen:visible");
 
     $("[data-l]").on("click", function () {
