@@ -6,6 +6,11 @@ body {
     font-family: Helvetica;
 }
 
+ * {
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+}
+
 p {
     font-size: 12px;
     font-weight: bold;
