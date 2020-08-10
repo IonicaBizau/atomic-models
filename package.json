@@ -1,0 +1,42 @@
+{
+  "name": "atomic-models-simulation-app",
+  "version": "1.0.0",
+  "description": "A simulation of Rutherford and Thompson experiments.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IonicaBizau/atomic-models.git"
+  },
+  "keywords": [
+    "simulation",
+    "atoms"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/atomic-models/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/atomic-models#readme",
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "scripts/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js",
+    "bloggify.js",
+    "bloggify.json",
+    "bloggify/"
+  ],
+  "blah": {
+    "title": "Atomic Models",
+    "ex_image": "http://i.imgur.com/N5hhnrZ.png"
+  }
+}
